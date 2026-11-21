@@ -3,18 +3,18 @@ import { mkdirSync, readdirSync, rmSync, writeFileSync } from "node:fs";
 const TEXT = `The Keys
 
 Can I drive? I asked.
-He put the keys in my hand
+He pressed the keys in my hand
 and sat beside me,
 both feet on the floor,
 braking at nothing.
 
-The road was empty.
-At the first turn I stalled.
+My hands shook on the wheel.
+At the first light I stalled.
+A car waited behind.
 He did not reach over.
-His hands stayed in his lap.
 
 I turned the key again
-and drove us home, slow.`;
+and drove home in first.`;
 
 const OUT = process.env.MAKEFUN_OUTPUT_DIR || "/output";
 mkdirSync(OUT, { recursive: true });
