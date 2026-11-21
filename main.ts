@@ -16,6 +16,7 @@ His hands stayed in his lap.
 I turned the key again
 and drove us home, slow.`;
 
-mkdirSync("/output", { recursive: true });
-for (const f of readdirSync("/output")) rmSync("/output/" + f, { recursive: true, force: true });
-writeFileSync("/output/entry.txt", TEXT, "utf8");
+const OUT = process.env.MAKEFUN_OUTPUT_DIR || "/output";
+mkdirSync(OUT, { recursive: true });
+for (const f of readdirSync(OUT)) rmSync(OUT + "/" + f, { recursive: true, force: true });
+writeFileSync(OUT + "/entry.txt", TEXT, "utf8");
