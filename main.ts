@@ -1,19 +1,20 @@
 import { mkdirSync, writeFileSync } from "node:fs";
 
-const TEXT = `The Wind
+const TEXT = `The Keys
 
-He wound it every morning,
-thirty years, thumb and finger,
-before the kettle.
+Can I drive? I asked.
+He put the keys in my hand
+and sat beside me,
+both feet on the floor,
+braking at nothing.
 
-Now his hands shake.
-Wind it for me, he says,
-and holds the watch out.
+The road was empty.
+At the first turn I stalled.
+He did not reach over.
+His hands stayed in his lap.
 
-I turn the crown till it stops,
-then set it back on his wrist.
-It ticks on his pulse.
-He is the one keeping time.`;
+I turned the key again
+and drove us home, slow.`;
 
 mkdirSync("/output", { recursive: true });
 writeFileSync("/output/entry.txt", TEXT, "utf8");
