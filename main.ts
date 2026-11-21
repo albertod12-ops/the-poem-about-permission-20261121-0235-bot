@@ -1,4 +1,4 @@
-import { mkdirSync, writeFileSync } from "node:fs";
+import { mkdirSync, readdirSync, rmSync, writeFileSync } from "node:fs";
 
 const TEXT = `The Keys
 
@@ -17,4 +17,5 @@ I turned the key again
 and drove us home, slow.`;
 
 mkdirSync("/output", { recursive: true });
+for (const f of readdirSync("/output")) rmSync("/output/" + f, { recursive: true, force: true });
 writeFileSync("/output/entry.txt", TEXT, "utf8");
